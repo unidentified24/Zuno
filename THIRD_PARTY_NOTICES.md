@@ -12,6 +12,9 @@ See the `LICENSE` file in the repository for the full license text.
 - **Media3 OkHttp datasource, OkHttp and Okio:** Retain their upstream Apache-2.0 licenses.
 - **AndroidX RecyclerView 1.4.0:** Apache License 2.0. Source: https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/
 
+- **AndroidX AppCompat, Fragment and MediaRouter:** Apache License 2.0; transitive Google Cast UI dependencies.
+- **Google Play services Cast framework 22.3.1:** Google SDK/API terms and applicable packaged notices. Source licensing of Velixio does not relicense this SDK. Verify distribution and GPL compatibility along with the external runtime before public distribution.
+
 ## Testing dependencies
 
 The following dependencies are used for development and testing:

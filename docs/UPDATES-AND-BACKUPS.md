@@ -28,4 +28,4 @@ Tags may be plain (1.0.2), prefixed (v1.0.2 or VelixioStream1.0.2), or numbered 
 Older installed updaters still need plain semantic tags such as v1.0.2 to receive this fix.
 
 ## Android expansion build
-The development branch currently builds 1.1.0-rc2, versionCode 21. The next candidate must use a higher code and a newer version (for example 1.1.0-rc3/code 22). Stable installations ignore release candidates. No release asset is published by this change. Download jobs and their private URLs/headers are not backup data.
+The development branch currently builds 1.1.0-rc3, versionCode 22. The next candidate must use a higher code and a newer version (for example 1.1.0-rc4/code 23). Stable installations ignore release candidates. No release asset is published by this change. Download jobs and their private URLs/headers are not backup data.

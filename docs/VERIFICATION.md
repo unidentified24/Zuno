@@ -1,13 +1,20 @@
 # Verification
 
-## Current development checkpoint: 1.1.0-rc2
+## Current development checkpoint: 1.1.0-rc3
+- Debug APK assembly and device-test compilation passed; all 122 JVM/lifecycle tests passed.
+- Android debug lint 8.12.2: zero errors and 101 warnings. The newer lint parser handles Cast SDK Kotlin metadata; the packaging/JDK/Gradle/native toolchain stays unchanged. Warnings include untranslated UI text, dependency/version suggestions and existing native-runtime loading.
+- Package/version, signer, both native bindings, companion asset and all eight packaged native-library integrity checks passed.
+- Casting coverage includes signed HLS variants/keys/maps/segments, unchanged media/range bytes, opaque session URLs and revocation, single-use pairing/five-attempt lockout, private/reserved address rejection, same-device DLNA controls, external-entity rejection and no automatic Cast SDK/relay startup from the casting screen.
+- No physical phone/TV, Google Cast receiver, DLNA action or TV-browser decoding was tested. Screen-off/network-change lifetime and live content compatibility remain hardware acceptance requirements; no universal receiver or Play Protect verdict is claimed. See CASTING.md.
+
+## Previous development checkpoint: 1.1.0-rc2
 - Debug APK assembly and device-test compilation passed; 112 JVM/lifecycle tests passed.
 - Android debug lint: zero errors and 69 warnings.
 - Packaged signature, package/version, native binding, companion asset and all eight native-library integrity checks passed.
 - New coverage includes queue ordering/recovery/retry identity, retained HLS segments after interrupted download, cache-only travel checks with missing segments, combined metadata filters, scoped recommendation feedback, caption timing/video-byte bypass, followed-series backup isolation, widget privacy, TV focus, watch-time privacy/backup merging, profile-return behavior and queue UI-to-service wiring.
 - Physical-device streaming, changing signed URLs, foreground-service timing, Wi-Fi transitions, reminders, widgets, caption sync, audio effects, Android TV, folding screens and accessibility remain unverified. The tests do not prove live content completeness or Play Protect acceptance.
 
-Direct receiver casting remains pending; Android screen-mirroring settings are available. Catalog trailers and episode notices depend on supplied metadata. See ANDROID-EXPANSION.md for precise feature limits.
+At rc2, direct receiver casting remained pending; rc3 adds the paths documented in CASTING.md. Catalog trailers and episode notices depend on supplied metadata. See ANDROID-EXPANSION.md for precise feature limits.
 
 ## Previous development checkpoint: 1.1.0-rc1
 - Debug APK assembly, device-test compilation and 84 JVM/lifecycle tests passed.

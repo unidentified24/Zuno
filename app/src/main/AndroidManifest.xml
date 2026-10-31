@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-feature android:name="android.software.leanback" android:required="false" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,6 +15,9 @@
     <application android:name=".VeyraApplication" android:label="Velixio" android:theme="@style/Theme.Velixio"
         android:allowBackup="false" android:fullBackupContent="false" android:dataExtractionRules="@xml/data_extraction_rules" android:usesCleartextTraffic="false" android:networkSecurityConfig="@xml/network_security_config"
         android:banner="@drawable/tv_banner" android:icon="@mipmap/ic_launcher" android:supportsRtl="true">
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="app.veyra.CastOptionsProvider" />
+        <service android:name=".CastBridgeService" android:exported="false" android:foregroundServiceType="mediaPlayback" />
+        <activity android:name=".CastActivity" android:exported="false" android:launchMode="singleTop" />
         <service android:name=".data.CurrentEngineService" android:exported="false" android:process=":stream_current" />
         <service android:name=".data.ClassicEngineService" android:exported="false" android:process=":stream_classic" />
         <activity android:name=".PlayerActivity" android:exported="false" android:supportsPictureInPicture="true" android:resizeableActivity="true" android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation" />

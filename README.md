@@ -5,7 +5,7 @@
 An Android streaming app with artwork-led discovery, a fullscreen player and a library you can take with you.
 
 ## Android expansion (development)
-The 1.1.0-rc2 development build adds a durable download queue, metadata filters and genre preferences, a resume widget, TV focus controls, wide title pages, series following, external-caption timing, optional audio effects and active watch-time tracking. It retains the profiles, collections and player tools from rc1. See the [implementation status and remaining work](docs/ANDROID-EXPANSION.md); online accounts, sync and the iPhone website are deferred.
+The 1.1.0-rc3 development build adds Google Cast, compatible DLNA receivers and one-time TV-browser pairing, alongside a durable download queue, metadata filters and genre preferences, a resume widget, TV focus controls, wide title pages, series following, external-caption timing, optional audio effects and active watch-time tracking. It retains the profiles, collections and player tools from rc1. See [TV casting compatibility](docs/CASTING.md) and the [implementation status and remaining work](docs/ANDROID-EXPANSION.md); online accounts, sync and the iPhone website are deferred.
 
 ## Downloads
 [Download APKs from GitHub Releases](https://github.com/unidentified24/Velixio/releases).

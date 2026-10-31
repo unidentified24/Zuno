@@ -1,5 +1,13 @@
 # Release notes
 
+## 1.1.0-rc3 — TV casting development
+- Add a dedicated Cast to TV screen from the player.
+- Add Google Cast via the public default receiver and standards-based DLNA discovery/AVTransport controls.
+- Add TV-browser playback with a short LAN address and a single-use, two-minute pairing code, limited to five failed attempts.
+- Relay the selected HLS/MP4 stream without transcoding or changing upstream authorization. The relay registers playlist resources behind temporary opaque URLs, forwards range requests and retains origin-scoped headers.
+- Keep casting active in a foreground service while the screen is off; stop on explicit stop, task removal, process death, network loss, ten idle minutes or twelve hours.
+- Universal receiver compatibility is not claimed: browser codecs, Google Play services, DLNA capabilities and device support vary. See CASTING.md. Offline casting, DASH, remote watch-history synchronization and receiver caption controls are not implemented.
+
 ## 1.1.0-rc2 — queue and Android platform features
 - Add a persisted sequential queue with pause/resume/retry/reordering and safe fresh-stream resolution. Retain partial data when the stream resource identity is unchanged.
 - Add metadata-based search filters and explicit genre/history recommendation preferences.

@@ -1,4 +1,4 @@
-# Android expansion — 1.1.0-rc2
+# Android expansion — 1.1.0-rc3
 
 This development branch now contains two implementation increments. Device acceptance is still pending. Online accounts, cross-device sync and the iPhone website remain deferred at the owner's request. Releases are uploaded by the owner; this work does not publish a GitHub Release.
 
@@ -25,6 +25,7 @@ This development branch now contains two implementation increments. Device accep
 | Search | Debounced results, recent submitted searches, year/rating/genre/language and Movies & series/Shorts filters. Filtering applies to each supplied results page; missing metadata cannot match an active filter. Pure film-versus-series filtering is available through the existing browse sections, not inferred from missing search metadata. |
 | Series following | Follow multi-episode titles, inspect/check/unfollow them, and receive optional notices when the selected version's listed episode count increases. Android schedules checks roughly every six hours; up to 20 titles are checked per run, rotating larger libraries. Failures retain previous counts. Not a server push service or a guarantee of release timing. |
 | Trailers | An in-app preview action appears only for a valid explicit HTTPS `trailer_url` supplied by the catalog. There is no separately configured trailer provider; the catalog may supply none. |
+| Casting | Google Cast default receiver, DLNA AVTransport discovery and controls, and single-use TV-browser pairing. HLS/MP4 only, on one private IPv4 LAN. Google Play services are needed only for Google Cast. See CASTING.md; hardware acceptance is pending. |
 | TV | Optional Android TV launcher entry/banner, focus outlines, larger cards, D-pad control reveal and wide layouts. Runtime support still requires a compatible ARM device or working translation. Physical TV/remote playback remains unverified. |
 | Tablets/foldables | Existing responsive browsing plus artwork/details columns on wide windows. Narrow windows return to a single column. No hinge-specific posture integration is claimed. |
 | Shortcuts/widget | Search, Downloads and Continue Watching launcher shortcuts, plus a resume widget with profile/title and optional title privacy. Widget refresh is throttled and also follows profile changes. |
@@ -35,7 +36,7 @@ This development branch now contains two implementation increments. Device accep
 
 ## Remaining requirements and limitations
 
-- Direct Chromecast/receiver playback is not implemented. The current player exposes a localhost-only stream. The provided Screen mirroring action opens Android's system controls; it is not direct casting. A receiver-reachable authenticated stream or gateway is needed for direct casting.
+- Direct Google Cast, compatible DLNA and browser receiver paths are implemented in rc3 through a session-only LAN relay. Universal TV support, Roku direct integration, Matter Casting/Fire TV receiver integration, offline casting, DASH relay, receiver captions and remote progress/history synchronization remain outside this implementation. See CASTING.md for capability and security limits.
 - Hinge-aware foldable postures, more complete tablet/TV navigation, remote/device acceptance and true loudness normalization need additional work.
 - All-profile backup bundles and export of Home/search/discovery/caption-timing preferences are not included. Current backup scope is documented in VELIXIO-DATA.md.
 - Trailer coverage and episode-reminder reliability depend on actual catalog metadata. No unsupported content or release dates are invented.
